@@ -1,0 +1,106 @@
+@import "./variables.scss";
+.social-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;  
+    .social-header {
+      color: $flax;
+    }
+  
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .post-card {
+      background-color: $white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      margin-bottom: 20px;
+  
+      .post-title {
+        color: $flax;
+      }
+  
+      .post-postedBy {
+        color: $primary;
+        margin-top: 5px;
+      }
+  
+      .post-content {
+        margin-top: 10px;
+      }
+  
+      .post-actions {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+  
+        .like-button {
+          background-color: $flax;
+          color: $white;
+          border: none;
+          border-radius: 5px;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: $sandy-brown;
+          }
+        }
+  
+        .likes-count,
+        .comments-count {
+          margin-left: 10px;
+          color: $primary;
+        }
+      }
+    }
+  }
+.s-main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:  2rem;
+}
+.s-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 78vh; 
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.s-card-container::-webkit-scrollbar { 
+  width: 8px; 
+} 
+
+.s-card-container::-webkit-scrollbar-track { 
+  background: transparent
+
+} 
+
+.s-card-container::-webkit-scrollbar-thumb { 
+  background: #1976d2;
+  border-radius: 10px;
+} 
+.s-card-container::-webkit-scrollbar-corner { 
+  border-radius: 10px;
+}
+
+.s-card-container::-webkit-scrollbar-thumb:hover { 
+  background: $oxford-blue; 
+} 
+.s-card-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    // width: 30vw;
+}
+  

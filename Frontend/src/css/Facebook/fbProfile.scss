@@ -1,0 +1,39 @@
+@import "../variables.scss";
+
+.fbPageCardContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5px;
+    max-height: 50vh;
+    overflow-y: scroll !important;
+}
+.fbPageCardContainer::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.fbPageCardContainer::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+.fbPageCardContainer::-webkit-scrollbar-thumb{
+    background-color: $primary;
+    border-radius: 5px;
+}
+
+.fbPageCard { 
+    width: 300;
+    overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 5px 10px;
+    color : $black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+}
+
+.fbPageCard:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+}

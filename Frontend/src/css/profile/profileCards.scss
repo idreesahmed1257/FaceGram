@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.profile-card-container{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 1rem;
+ }
+.profile-cover{
+    height: 20vh;
+    width: 100%;
+ }
+.profile-picture-container {
+    position: absolute;
+    top: 10vh;
+    left: auto;
+    right: auto;
+    border: 3px solid $white;
+    border-radius:  50%;
+  
+}
+.profile-picture{
+    width: 100px !important;
+    height: 100px !important ;
+}
+.profile-data{
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+     margin-top: 5vh;
+}

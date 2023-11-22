@@ -1,0 +1,42 @@
+@import "./variables.scss";
+.home-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 90vh;
+  }
+  
+  .weather-card {
+    background-color: $white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px $black;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .weather-card-header {
+    color: $secondary;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+  }
+  
+  .weather-location {
+    font-size: 18px;
+    color: $dark-gray
+  }
+  
+  .weather-description {
+    font-size: 14px;
+    color: $dark-gray;
+    margin-top: 10px;
+  }
+  
+  .weather-temperature {
+    font-size: 24px;
+    color: $secondary;
+    margin-top: 15px;
+  }
+  

@@ -1,0 +1,46 @@
+@import '../variables.scss';
+ 
+.fb-chat-container{
+    height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+
+.fb-chat-pagination-btn {
+    align-self: center;
+    color: $oxford-blue;
+    cursor: pointer;
+}
+
+//scroll bar
+.fb-chat-container::-webkit-scrollbar { 
+    width: 2px; 
+  } 
+  
+.fb-chat-container::-webkit-scrollbar-track { 
+    background: transparent
+  
+} 
+  
+/* You can also style the corner where the vertical and horizontal scrollbars meet (if both are visible) */
+  .fb-chat-container::-webkit-scrollbar-thumb { 
+    background: $primary;
+    border-radius: 10px;
+  } 
+  .fb-chat-container::-webkit-scrollbar-corner { 
+    border-radius: 10px;
+  }
+  
+  .fb-chat-container::-webkit-scrollbar-thumb:hover { 
+    background: $oxford-blue; 
+  } 
+  
+   
+   
+
+ 
+ 
+

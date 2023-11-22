@@ -1,0 +1,50 @@
+@import "./variables.scss";
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.auth-box {
+  background-color: $white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px $black;
+  width: 300px;
+  text-align: center;
+}
+
+.auth-box-header {
+  color: $primary;
+}
+
+.auth-form {
+  margin-top: 20px;
+}
+.auth-box-footer > a{
+  color : $oxford-blue;
+}
+
+// .auth-form  {
+//   width: 100%;
+//   padding: 10px;
+//   margin-bottom: 15px;
+//   border: 1px solid $gray;
+//   border-radius: 5px;
+// }
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: $flax;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: $sandy-brown;
+}
