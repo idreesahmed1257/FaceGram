@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "636bf41f-c0c7-4790-9e44-79bb239852d4",
+		"name": "First_Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14947159",
+		"_collection_link": "https://crimson-meadow-121648.postman.co/workspace/Kinectro~897ab76c-93f2-408e-8ab1-3f6f549bc781/collection/14947159-636bf41f-c0c7-4790-9e44-79bb239852d4?action=share&source=collection_link&creator=14947159"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"usman\",\n    \"email\": \"usman@12.com\",\n    \"password\" : \"Hello@12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getAllUsers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getAllUsers"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"usman@12.com\",\n    \"password\": \"Hello@12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "6501a87c46014eb87c65af68",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "Hafiz hasan Ahmed",
+									"type": "text"
+								},
+								{
+									"key": "userProfile",
+									"type": "file",
+									"src": "/home/screener/Desktop/Sampla Images/Image2.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/updateUser",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/uploads/2023-09-05T10:59:03.051Z-1685224701307.jpeg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMiLCJpYXQiOjE2OTM5MTE5OTAsImV4cCI6MTY5Mzk5ODM5MH0.WqQcWPu-8ddi5h7onoDDBa2CClZ7kHf2xbsQNGmm8oY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/uploads/2023-09-05T10:59:03.051Z-1685224701307.jpeg",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"uploads",
+								"2023-09-05T10:59:03.051Z-1685224701307.jpeg"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbmFuQDEyMy5jb20iLCJpYXQiOjE2OTUwMTIwNDV9.GwfDXS2U-rjQ9-HFaAQQNIKtRGMrjHv7AJRzO1bAYf4",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "createPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"7\",\n    \"content\": \"gg\",\n    \"userId\" : \"65014d5180833a69ce577901\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/post/createPost",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"post",
+								"createPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPosts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getAllPosts?pageNo=1&pageSize=4&searchTerm=",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getAllPosts"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "4"
+								},
+								{
+									"key": "searchTerm",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMuY29tIiwiaWF0IjoxNjk0MDg2MzIzfQ.Vnn00OWTEh_vtw1YNTVFVf0f9j6J-aJ111FWvFIlzZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/getPostById?userId=64f97bab866c376e79b6bf37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"getPostById"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "64f97bab866c376e79b6bf37"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/deletePost?id=64ef29f392193331f556606a",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"deletePost"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "64ef29f392193331f556606a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMiLCJpYXQiOjE2OTM5MDQ5OTcsImV4cCI6MTY5MzkwODU5N30.NuN9TU7sSbgWCVykyLI05QTHP5f3W57eX9Re-yMq6U0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\" : \"64f6e06704605e2ede58fe79\",\n    \"title\" : \"Uodated Hassan's ddth psot Title\",\n    \"content\" : \"Updated Conents 4th\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/updatePost",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"updatePost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostBySearchTerm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getPostBySearchTerm?pageNo=1&pageSize=4&searchTerm=Second",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getPostBySearchTerm"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "4"
+								},
+								{
+									"key": "searchTerm",
+									"value": "Second"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMuY29tIiwiaWF0IjoxNjk0MDg2MzIzfQ.Vnn00OWTEh_vtw1YNTVFVf0f9j6J-aJ111FWvFIlzZQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "createComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"64f97bb5866c376e79b6bf3a\",\n    \"comment\": \"Hassan second comment\",\n    \"postId\": \"64f97896f51e734fa090f842\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/createComment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"createComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllComments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getAllComments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getAllComments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getPostByCommentId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getPostByCommentId?commentId=64f5768c8e39f5d53efb913f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getPostByCommentId"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "64f5768c8e39f5d53efb913f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMuY29tIiwiaWF0IjoxNjk0MDcxNzQyLCJleHAiOjE2OTQxNTgxNDJ9.-VNfv3Y_RYjtpkL7EB_SrajCs_qE5DncfMRzll6QXN4",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "likePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\": \"64f97896f51e734fa090f842\",\n    \"userId\": \"64f97bb5866c376e79b6bf3a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/likePost",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"likePost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllLikes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/getAllLikes",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"getAllLikes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imhhc3NhbkAxMjMuY29tIiwiaWF0IjoxNjk0MDcxNzQyLCJleHAiOjE2OTQxNTgxNDJ9.-VNfv3Y_RYjtpkL7EB_SrajCs_qE5DncfMRzll6QXN4",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImlkcmVlc0AxMjMuY29tIiwiaWF0IjoxNjk0MDcwMzg5LCJleHAiOjE2OTQxNTY3ODl9.mLt3puxMtchxjz17x87Xc4TBR2cyVfatTBoZ8LrIYTA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:5000/api",
+			"type": "string"
+		},
+		{
+			"key": "post_user",
+			"value": "http://localhost:5000/api/post"
+		}
+	]
+}
